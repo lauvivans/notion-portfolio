@@ -65,6 +65,7 @@
     "@semantic-release/git": "^10.0.1",
     "@types/node": "^25.9.9",
     "@vitejs/plugin-vue": "^6.0.10",
+    "@vue/language-core": "^3.3.14",
     "@vue/tsconfig": "^0.8.1",
     "eslint": "^9.39.5",
     "eslint-config-prettier": "^10.1.8",
@@ -82,7 +83,7 @@
     "typescript": "^5.9.3",
     "typescript-eslint": "^8.72.1",
     "vite": "^7.3.7",
-    "vite-plugin-dts": "^4.5.4",
+    "vite-plugin-dts": "^5.1.2",
     "vue-eslint-parser": "^10.4.2",
     "vue-tsc": "^3.3.14"
   },
