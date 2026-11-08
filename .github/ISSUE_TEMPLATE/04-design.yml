@@ -1,0 +1,40 @@
+name: 🎨 Design
+description: Screen or flow design before implementation
+labels: ["design"]
+projects: ["lauvivans/5"]
+body:
+  - type: input
+    id: screen
+    attributes:
+      label: Screen or flow
+      placeholder: e.g. Settings page
+    validations:
+      required: true
+  - type: textarea
+    id: goal
+    attributes:
+      label: Goal
+      description: What the user needs to be able to do on this screen.
+    validations:
+      required: true
+  - type: textarea
+    id: references
+    attributes:
+      label: References
+      description: Optional. Inspiration, existing screens, related issues.
+  - type: textarea
+    id: deliverable
+    attributes:
+      label: Deliverable
+      description: What should be produced.
+      placeholder: e.g. HTML prototype or mockup
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      value: |
+        - [ ]
+    validations:
+      required: true
