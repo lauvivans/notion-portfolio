@@ -1,0 +1,49 @@
+name: 🔎 Spike
+description: Time-boxed investigation that delivers a decision, not code
+labels: ["spike"]
+projects: ["lauvivans/5"]
+body:
+  - type: textarea
+    id: question
+    attributes:
+      label: Question
+      description: What needs to be answered.
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: Why this came up and what depends on the answer.
+    validations:
+      required: true
+  - type: input
+    id: timebox
+    attributes:
+      label: Timebox
+      description: How much time to invest before stopping and deciding.
+      placeholder: e.g. ½ day
+    validations:
+      required: true
+  - type: textarea
+    id: options
+    attributes:
+      label: Options to evaluate
+      description: Optional. Alternatives, tools or approaches to compare.
+  - type: textarea
+    id: deliverable
+    attributes:
+      label: Deliverable
+      description: What should be produced at the end.
+      placeholder: e.g. Written recommendation in docs/, comparison or proof of concept
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      value: |
+        - [ ] Decision recorded
+        - [ ] Implementation issues created
+    validations:
+      required: true
