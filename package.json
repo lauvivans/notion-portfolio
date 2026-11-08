@@ -23,6 +23,8 @@
     "build": "vue-tsc -b && vite build",
     "build:pkg": "vue-tsc -b && vite build --config vite.config.package.ts",
     "preview": "vite preview",
+    "test": "vitest run",
+    "test:watch": "vitest",
     "sass": "npx sass src/assets/scss/main.scss:src/assets/css/main.css",
     "watch-sass": "npx sass packages/core/assets/scss/main.scss:packages/core/assets/css/main.css --watch",
     "test:cli": "node ./bin/cli.js",
@@ -54,7 +56,8 @@
   "lint-staged": {
     "*.{js,jsx,ts,tsx,vue}": [
       "eslint --fix",
-      "prettier --write"
+      "prettier --write",
+      "vitest related --run --passWithNoTests"
     ]
   },
   "devDependencies": {
@@ -65,11 +68,13 @@
     "@semantic-release/git": "^10.0.1",
     "@types/node": "^25.0.3",
     "@vitejs/plugin-vue": "^6.0.3",
+    "@vue/test-utils": "^2.5.1",
     "@vue/tsconfig": "^0.8.1",
     "eslint": "^9.39.2",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-vue": "^10.6.2",
     "globals": "^16.5.0",
+    "happy-dom": "^21.0.4",
     "husky": "^9.1.7",
     "jiti": "^2.6.1",
     "lint-staged": "^16.2.7",
@@ -83,6 +88,7 @@
     "typescript-eslint": "^8.50.1",
     "vite": "^7.3.0",
     "vite-plugin-dts": "^4.5.4",
+    "vitest": "^5.1.0",
     "vue-eslint-parser": "^10.2.0",
     "vue-tsc": "^3.2.1"
   },
