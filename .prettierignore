@@ -5,6 +5,8 @@ bin
 .vscode
 .github
 src
-public# Generated files
+public
+
+# Generated files
 CHANGELOG.md
 packages/core/assets/css/main.css
