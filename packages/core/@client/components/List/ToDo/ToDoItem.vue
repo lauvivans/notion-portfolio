@@ -1,19 +1,11 @@
 <script setup lang="ts">
-import { useVModel } from "@vueuse/core";
-
-const props = defineProps<{ isChecked?: boolean }>();
-
-const emit = defineEmits<{
-  "update:isChecked": [value: boolean];
-}>();
-
-const value = useVModel(props, "isChecked", emit);
+const value = defineModel<boolean>("isChecked");
 </script>
 
 <template>
   <li class="todo-item">
     <input class="todo-item__checkbox" type="checkbox" v-model="value" />
-    <Text :style="props.isChecked ? { textDecoration: 'line-through' } : ''">
+    <Text :style="value ? { textDecoration: 'line-through' } : ''">
       <slot />
     </Text>
   </li>
