@@ -58,10 +58,9 @@ jobs:
           fi
           echo "$files" | xargs -d '\n' npx prettier --check --ignore-unknown
 
-      # No test script yet; this step starts running once one is added.
       - name: Run tests
         if: ${{ !cancelled() && steps.install.outcome == 'success' }}
-        run: npm run test --if-present
+        run: npm test
 
       - name: Build
         if: ${{ !cancelled() && steps.install.outcome == 'success' }}
