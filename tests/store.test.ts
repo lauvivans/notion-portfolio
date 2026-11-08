@@ -64,12 +64,28 @@ describe("settings store", () => {
   it("saves settings for the current page only", () => {
     setTabs([{ pageId: "home", pageName: "home", pagePath: "/home" }]);
     store.$reset();
+    store.dynamicPageInfo = {
+      about: {
+        settings: {
+          fontFamily: "font-roboto-serif",
+          fontSize: "font-size-small",
+          pageSize: "page-default-width",
+        },
+      },
+    };
     store.storeActivePage(page("home"));
 
     store.storeDynamicPageInfo({ fontFamily: "font-roboto-mono" });
     store.storeDynamicPageInfo({ pageSize: "page-full-width" });
 
     expect(store.dynamicPageInfo).toEqual({
+      about: {
+        settings: {
+          fontFamily: "font-roboto-serif",
+          fontSize: "font-size-small",
+          pageSize: "page-default-width",
+        },
+      },
       home: {
         settings: {
           fontFamily: "font-roboto-mono",

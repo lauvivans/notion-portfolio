@@ -6,5 +6,5 @@
     "emitDeclarationOnly": false,
     "noEmit": true
   },
-  "include": ["tests", "packages/core", "src"]
+  "include": ["tests"]
 }
