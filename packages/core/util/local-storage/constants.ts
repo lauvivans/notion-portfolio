@@ -1,6 +1,5 @@
-export const LOCAL_STORAGE_DYNAMIC_PAGE_INFO =
-  "notion-portfolio-dynamic-page-info";
-export const LOCAL_STORAGE_ACTIVE_TAB = "notion-portfolio-active-tab";
-export const LOCAL_STORAGE_TABS = "notion-portfolio-tabs";
-export const LOCAL_STORAGE_THEME = "notion-portfolio-theme";
-export const LOCAL_STORAGE_ASIDE = "notion-portfolio-aside";
+export const LOCAL_STORAGE_DYNAMIC_PAGE_INFO = "kami-dynamic-page-info";
+export const LOCAL_STORAGE_ACTIVE_TAB = "kami-active-tab";
+export const LOCAL_STORAGE_TABS = "kami-tabs";
+export const LOCAL_STORAGE_THEME = "kami-theme";
+export const LOCAL_STORAGE_ASIDE = "kami-aside";

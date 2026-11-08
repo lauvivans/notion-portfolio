@@ -39,7 +39,7 @@ function handleNavigate(path: string) {
                     />
                 </router-view>
 
-                <footer class="footer">by Notion Portfolio (^.^)</footer>
+                <footer class="footer">by Kami (^.^)</footer>
             </div>
         </div>
     </div>

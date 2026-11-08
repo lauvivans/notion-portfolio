@@ -1,5 +1,5 @@
 import PageExample from "../pages/index.vue";
-import { type IMetadata } from "@lauravivan/notion-portfolio";
+import { type IMetadata } from "@lauvivans/kami";
 
 const metadata: IMetadata = {
   user: {

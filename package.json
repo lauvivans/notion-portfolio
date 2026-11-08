@@ -1,5 +1,5 @@
 {
-  "name": "@lauravivan/notion-portfolio",
+  "name": "@lauvivans/kami",
   "version": "1.1.6",
   "description": "A Notion-based portfolio",
   "type": "module",
@@ -16,7 +16,7 @@
   ],
   "author": "Laura Vivan",
   "bin": {
-    "create-notion-portfolio": "bin/cli.js"
+    "create-kami": "bin/cli.js"
   },
   "scripts": {
     "dev": "vite",
@@ -35,12 +35,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lauravivan/notion-portfolio.git"
+    "url": "git+https://github.com/lauvivans/kami.git"
   },
   "bugs": {
-    "url": "https://github.com/lauravivan/notion-portfolio/issues"
+    "url": "https://github.com/lauvivans/kami/issues"
   },
-  "homepage": "https://github.com/lauravivan/notion-portfolio#readme",
+  "homepage": "https://github.com/lauvivans/kami#readme",
   "files": [
     "dist",
     "bin",

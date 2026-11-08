@@ -5,7 +5,7 @@ import {
     useStore,
     Tabs,
     useAside,
-} from "@lauravivan/notion-portfolio";
+} from "@lauvivans/kami";
 import { useRouter } from "vue-router";
 import metadata from "@/metadata";
 
@@ -44,7 +44,7 @@ function handleNavigate(path: string) {
                     />
                 </router-view>
 
-                <footer class="footer">by Notion Portfolio (^.^)</footer>
+                <footer class="footer">by Kami (^.^)</footer>
             </div>
         </div>
     </div>

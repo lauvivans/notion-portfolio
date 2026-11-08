@@ -221,7 +221,7 @@ onBeforeUnmount(() => {
         <div class="modal__appearance">
           <div>
             <h3>Appearance</h3>
-            <h4>Customize how Notion Portfolio looks on your device</h4>
+            <h4>Customize how Kami looks on your device</h4>
           </div>
           <SelectBtn
             :options="Object.entries(Theme)"

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Text, Callout } from "@lauravivan/notion-portfolio";
+import { Text, Callout } from "@lauvivans/kami";
 </script>
 
 <template>

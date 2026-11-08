@@ -1,5 +1,5 @@
 import { createApp } from "vue";
-import "@lauravivan/notion-portfolio/dist/notion-portfolio.css";
+import "@lauvivans/kami/dist/kami.css";
 import {
   createRouter,
   createWebHistory,
@@ -12,7 +12,7 @@ import {
   useStore,
   piniaInstance,
   type PageInfo,
-} from "@lauravivan/notion-portfolio";
+} from "@lauvivans/kami";
 import App from "@/App.vue";
 import metadata from "@/metadata";
 
