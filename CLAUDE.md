@@ -38,7 +38,7 @@ Vue 3, Vue Router, Pinia, Sass and TypeScript, built with Vite in library mode. 
 - **Branch name:** `<type>/<issue>-kebab-case-name`.
 - **Commits and PR title:** Conventional Commits. semantic-release reads them on `main` to pick the next version, so the type matters: `fix` is a patch, `feat` a minor, `!` or `BREAKING CHANGE` a major.
 - **PR body:** ends with `Closes #<issue>`, also on fixes made after QA.
-- **Merge:** squash into `develop`. Releases go from a `release/<version>` branch, cut from `develop`, into `main` with a merge commit (never squash). Head branches are deleted on merge, so a PR must never come straight from `develop`.
+- **Merge:** squash into `develop`. Releases go from a `release/<version>` branch, cut from `develop`, into `main` with a merge commit (never squash). The version in the branch name follows the commits since the last tag (`fix` → patch, `feat` → minor, `!` → major), the same rule semantic-release applies on `main`. Head branches are deleted on merge, so a PR must never come straight from `develop`.
 - **After a release:** semantic-release pushes a `chore(release)` commit to `main` (version and `CHANGELOG.md`), so merge `main` back into `develop` after every release. Never rebase `develop`.
 - **Attribution:** no `Co-Authored-By` or "Generated with Claude Code" in commits and PRs.
 - **Draft before creating:** show the full text of any issue and only create it after approval. Pull requests are opened directly; say when one is open, with its link. They are reviewed on GitHub before merge.
