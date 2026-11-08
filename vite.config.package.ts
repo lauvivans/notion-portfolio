@@ -37,18 +37,11 @@ export default defineConfig({
     emptyOutDir: true,
     lib: {
       entry: path.resolve(import.meta.dirname, "packages/core/index.ts"),
-      name: "notion-portfolio",
       fileName: (format) => `index.${format}.js`,
       formats: ["es"],
     },
     rolldownOptions: {
       external: ["vue", "vue-router"],
-      output: {
-        globals: {
-          vue: "Vue",
-          "vue-router": "VueRouter",
-        },
-      },
     },
   },
 });
