@@ -1,0 +1,26 @@
+name: 🔧 Chore
+description: Maintenance, refactor, configuration or tech debt
+labels: ["chore"]
+projects: ["lauvivans/5"]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What to do
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why
+      description: Why do it now.
+    validations:
+      required: true
+  - type: textarea
+    id: done
+    attributes:
+      label: Definition of done
+      value: |
+        - [ ]
+    validations:
+      required: true

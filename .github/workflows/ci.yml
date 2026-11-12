@@ -1,0 +1,67 @@
+name: CI
+
+on:
+  pull_request:
+    branches: [main, develop]
+
+permissions:
+  contents: read
+
+# A new push to a PR cancels its previous run.
+concurrency:
+  group: ci-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  ci:
+    name: Type check, lint, format, tests and build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+        with:
+          # Full history, so the format check can diff against the base branch.
+          fetch-depth: 0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+
+      - name: Install dependencies
+        id: install
+        run: npm ci --no-audit --no-fund
+
+      # Each check runs even if the one before failed, so a single run shows
+      # every problem. The job still fails if any of them fails.
+      - name: Type check
+        if: ${{ !cancelled() && steps.install.outcome == 'success' }}
+        run: npx vue-tsc -b
+
+      - name: Lint
+        if: ${{ !cancelled() && steps.install.outcome == 'success' }}
+        run: npm run lint
+
+      # Only the files the PR changes are checked.
+      - name: Check formatting of changed files
+        if: ${{ !cancelled() && steps.install.outcome == 'success' }}
+        env:
+          BASE: ${{ github.base_ref }}
+        run: |
+          files=$(git diff --name-only --diff-filter=ACMR "origin/$BASE...HEAD" \
+            | grep -E '\.(js|jsx|ts|tsx|vue|json|css|scss|md)$' || true)
+          if [ -z "$files" ]; then
+            echo "No changed files to check."
+            exit 0
+          fi
+          echo "$files" | xargs -d '\n' npx prettier --check --ignore-unknown
+
+      - name: Run tests
+        if: ${{ !cancelled() && steps.install.outcome == 'success' }}
+        run: npm test
+
+      - name: Build
+        if: ${{ !cancelled() && steps.install.outcome == 'success' }}
+        run: npm run build:pkg

@@ -1,3 +1,4 @@
+/// <reference types="vitest/config" />
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 import path from "path";
@@ -6,8 +7,8 @@ export default defineConfig({
   plugins: [vue()],
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "src"),
-      "@core": path.resolve(__dirname, "packages/core"),
+      "@": path.resolve(import.meta.dirname, "src"),
+      "@core": path.resolve(import.meta.dirname, "packages/core"),
     },
   },
 
@@ -21,5 +22,10 @@ export default defineConfig({
         `,
       },
     },
+  },
+
+  test: {
+    environment: "happy-dom",
+    include: ["tests/**/*.test.ts"],
   },
 });

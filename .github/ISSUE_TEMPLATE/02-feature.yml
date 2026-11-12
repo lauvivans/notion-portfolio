@@ -1,0 +1,38 @@
+name: ✨ Feature
+description: New feature or improvement
+labels: ["feature"]
+projects: ["lauvivans/5"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: Which need does this feature solve?
+      placeholder: As a user, I want … so that …
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal
+      description: How the feature should work.
+    validations:
+      required: true
+  - type: textarea
+    id: out-of-scope
+    attributes:
+      label: Out of scope
+      description: Optional. What this issue doesn't cover.
+  - type: textarea
+    id: design
+    attributes:
+      label: Design and references
+      description: Optional. Links to mockups, prototypes or design issues.
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      value: |
+        - [ ] Given … when … then …
+    validations:
+      required: true
