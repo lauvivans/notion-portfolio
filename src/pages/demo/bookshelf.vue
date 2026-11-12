@@ -1,5 +1,9 @@
 <script setup lang="ts">
 import { Text, Heading, BulletList, TextHighlight } from "@core/index.ts";
+import type { PageInfo } from "@core/index.ts";
+
+// The database gallery renders this page in its cards and passes these.
+defineProps<{ page?: PageInfo; hideDatabase?: boolean }>();
 </script>
 
 <template>
