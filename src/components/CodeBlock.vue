@@ -1,6 +1,7 @@
 <script setup lang="ts">
 // Site-only block: the library has no code block yet.
-// `callout` reuses the theme background the library sets for callouts.
+// `callout` picks up the background the dark themes set for callouts.
+// The light theme sets none, so `$gray` is the base.
 defineProps<{ code: string }>();
 </script>
 
@@ -13,6 +14,8 @@ defineProps<{ code: string }>();
   overflow-x: auto;
 
   padding: calc($DEFAULT_SPACING * 2);
+
+  background-color: $gray;
 
   font-family: $mono;
   font-size: $fs-small;
