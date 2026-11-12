@@ -14,7 +14,11 @@ Everything in the repository and on GitHub is in English: code, docs, file names
   - `store/`: the Pinia store, shared through `useStore`. `util/local-storage/` keeps theme, tabs, sidebar state and page settings in the browser.
   - `assets/scss/`: the styles. `_var.scss` holds the variables and `_theme.scss` the themes.
   - `@types/index.d.ts`: `IMetadata` and `PageInfo`, the shape a portfolio fills to describe its pages.
-- `src/`: the local playground, run with `npm run dev`. It imports the library from `packages/core` through the `@core` alias.
+- `src/`: the documentation site, served at kami.arualvivan.com and built with Kami itself. It imports the library from `packages/core` through the `@core` alias, so it also works as the local playground.
+  - `metadata/index.ts`: every page of the site. Top-level pages: Kami (home), Client docs, Developer docs and Demo.
+  - `pages/client-docs/` and `pages/developer-docs/`: the guides.
+  - `pages/demo/`: an example portfolio, with every block on the Blocks page.
+  - `components/CodeBlock.vue`: a code block used only by the site, since the library has none.
 - `template/`: the project the CLI copies. It has its own `package.json` and lockfile (#68). `gitignore` is renamed to `.gitignore` on copy, since npm drops dot-gitignore files from packages.
 - `bin/cli.js`: the CLI. It copies `template/`, installs its dependencies and then the library.
 - `tests/`: Vitest tests, with `tsconfig.vitest.json`.
@@ -27,7 +31,8 @@ Vue 3, Vue Router, Pinia, Sass and TypeScript, built with Vite in library mode. 
 
 ## Commands
 
-- `npm run dev`: the playground in `src/`. Node version is in `.nvmrc`.
+- `npm run dev`: the documentation site in `src/`. Node version is in `.nvmrc`.
+- `npm run build`: type check and build the documentation site into `dist/`.
 - `npm run build:pkg`: type check and build the package into `dist/`.
 - `npm run lint`, `npm run lint:css` (fails until #75), `npm run format`, `npm test`.
 - `npm run test:cli`: runs the CLI locally.

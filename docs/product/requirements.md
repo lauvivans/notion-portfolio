@@ -56,6 +56,14 @@ The components a page uses for its content, named after Notion's blocks:
 - **Database:** a list of pages shown as a gallery of cards. Clicking a card opens the page in a modal, with a link to its full page. The card preview can be the page's cover. The table layout isn't built yet (#49).
 - **Loader:** a loading indicator.
 
+## Documentation site
+
+- The site at kami.arualvivan.com is a Kami portfolio built from `src/`.
+- **Client docs:** for people building a portfolio. Start from here, Setup, Building your first page and Your first deploy.
+- **Developer docs:** for people working on the library. Contributing, Version control, Icons, Storage, Testing and Release and deploy.
+- **Demo:** an example portfolio with a gallery database of projects, and a Blocks page that shows every block next to the code that renders it.
+- Routes use browser history, so the host answers every path with `index.html`. Cloudflare Pages does this when the build has no `404.html`.
+
 ## Public API
 
 - The package exports the layout components, the blocks, `MainLayout`, `NotFoundPage`, `useStore`, `piniaInstance`, `useAside`, `useDisplay`, `isTouchDevice`, and the types `IMetadata` and `PageInfo`. The full list is in `packages/core/index.ts`.
