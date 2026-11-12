@@ -31,7 +31,7 @@ execSync(`npm install`, {
   stdio: "inherit",
 });
 
-const installer = `npm ${env === 'development' ? 'link' : 'install'} @lauravivan/notion-portfolio`;
+const installer = `npm ${env === 'development' ? 'link' : 'install'} @lauvivans/kami`;
 
 execSync(installer, {
   cwd: targetDir,
