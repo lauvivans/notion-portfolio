@@ -1,0 +1,57 @@
+name: 🐛 Bug
+description: Something doesn't work as it should
+labels: ["bug"]
+projects: ["lauvivans/5"]
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: One or two sentences about the problem.
+    validations:
+      required: true
+  - type: textarea
+    id: current
+    attributes:
+      label: Current behavior
+      description: What happens today.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What should happen.
+    validations:
+      required: true
+  - type: dropdown
+    id: where
+    attributes:
+      label: Where it happens
+      options:
+        - Pages
+        - Components
+        - Settings
+        - CLI
+        - Package
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: cause
+    attributes:
+      label: Likely cause
+      description: Optional. File, function or hypothesis about what causes the problem.
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Optional. Screenshots, videos or logs.
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      value: |
+        - [ ]
+    validations:
+      required: true
