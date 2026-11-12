@@ -9,14 +9,14 @@ export default defineConfig({
     dts({
       include: ["../**/*.ts", "../**/*.vue"],
       exclude: ["node_modules", "dist"],
-      tsconfigPath: path.resolve(__dirname, "./tsconfig.app.json"),
+      tsconfigPath: path.resolve(import.meta.dirname, "./tsconfig.app.json"),
       insertTypesEntry: true,
     }),
   ],
 
   resolve: {
     alias: {
-      "@core": path.resolve(__dirname, "packages/core"),
+      "@core": path.resolve(import.meta.dirname, "packages/core"),
     },
   },
 
@@ -36,19 +36,12 @@ export default defineConfig({
     outDir: "dist",
     emptyOutDir: true,
     lib: {
-      entry: path.resolve(__dirname, "packages/core/index.ts"),
-      name: "notion-portfolio",
+      entry: path.resolve(import.meta.dirname, "packages/core/index.ts"),
       fileName: (format) => `index.${format}.js`,
       formats: ["es"],
     },
-    rollupOptions: {
+    rolldownOptions: {
       external: ["vue", "vue-router"],
-      output: {
-        globals: {
-          vue: "Vue",
-          "vue-router": "VueRouter",
-        },
-      },
     },
   },
 });
