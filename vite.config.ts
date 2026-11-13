@@ -15,11 +15,16 @@ export default defineConfig({
   css: {
     preprocessorOptions: {
       scss: {
-        additionalData: `
+        // src/main.ts imports main.scss itself, so it skips the prefix that
+        // would make it @use itself (Sass "Module loop").
+        additionalData: (source: string, filename: string) =>
+          filename.replaceAll("\\", "/").endsWith("assets/scss/main.scss")
+            ? source
+            : `
           @use "/packages/core/assets/scss/main.scss";
           @use "/packages/core/assets/scss/_var.scss" as *;
           @use "/packages/core/assets/scss/_mixin.scss" as *;
-        `,
+        ${source}`,
       },
     },
   },

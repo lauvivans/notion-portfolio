@@ -56,3 +56,5 @@ dist-ssr
 *.sw?
 
 my-portfolio/
+# Compiled from packages/core/assets/scss; import main.scss instead
+packages/core/assets/css/

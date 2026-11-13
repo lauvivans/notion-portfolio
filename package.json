@@ -25,8 +25,6 @@
     "preview": "vite preview",
     "test": "vitest run",
     "test:watch": "vitest",
-    "sass": "npx sass src/assets/scss/main.scss:src/assets/css/main.css",
-    "watch-sass": "npx sass packages/core/assets/scss/main.scss:packages/core/assets/css/main.css --watch",
     "test:cli": "node ./bin/cli.js",
     "format": "npx prettier --write .",
     "lint": "npx eslint .",
