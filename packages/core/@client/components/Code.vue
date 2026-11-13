@@ -15,18 +15,26 @@ const props = defineProps<{ inline?: boolean }>();
   font-family: $mono;
   font-size: $fs-small;
 
-  background-color: $gray;
-
   &--inline {
-    padding: 0 calc($DEFAULT_SPACING / 3);
+    padding: calc($DEFAULT_SPACING / 9) calc($DEFAULT_SPACING / 2);
+    border-radius: $radius-small;
+
+    color: $latte-red;
+    background-color: $black-1;
   }
 
   &--block {
     overflow-x: auto;
 
-    padding: calc($DEFAULT_SPACING * 2);
+    margin: $DEFAULT_SPACING 0;
+    padding: calc($DEFAULT_SPACING * 3) calc($DEFAULT_SPACING * 2);
+    border-radius: $radius;
 
+    line-height: 1.5;
     white-space: pre;
+    tab-size: 2;
+
+    background-color: $gray;
   }
 }
 </style>
