@@ -36,12 +36,12 @@ about: {
     >. Every icon the library uses is listed in the <Code inline>Icons</Code>
     enum.</Text
   >
-  <Code>{{ enumCode }}</Code>
+  <Code lang="ts">{{ enumCode }}</Code>
   <Text
     >Inside the library, render them with the <Code inline>Icon</Code>
     component.</Text
   >
-  <Code>{{ usage }}</Code>
+  <Code lang="vue">{{ usage }}</Code>
   <Callout emoji="📌"
     >To add an icon, find its name on Iconify and add it to the enum. The
     icon is fetched from the Iconify API at runtime, so nothing else needs
@@ -58,5 +58,5 @@ about: {
     and credits it through the <Code inline>author</Code> and
     <Code inline>link</Code> fields.</Text
   >
-  <Code>{{ pageIcon }}</Code>
+  <Code lang="ts">{{ pageIcon }}</Code>
 </template>

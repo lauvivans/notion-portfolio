@@ -21,4 +21,16 @@ describe("Code", () => {
     expect(wrapper.element.tagName).toBe("PRE");
     expect(wrapper.find("pre > code").element.textContent).toBe(sample);
   });
+
+  it("highlights the block when it gets a language and escapes the source", () => {
+    const sample = 'const tag = "<b>";';
+    const wrapper = mount(Code, {
+      props: { lang: "ts" },
+      slots: { default: () => sample },
+    });
+
+    expect(wrapper.find(".hljs-keyword").text()).toBe("const");
+    expect(wrapper.find("b").exists()).toBe(false);
+    expect(wrapper.find("pre > code").element.textContent).toBe(sample);
+  });
 });

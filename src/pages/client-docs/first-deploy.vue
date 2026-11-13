@@ -13,11 +13,11 @@ git push -u origin main`;
     >The build bundles and minifies your code into the <Code inline>dist/</Code>
     folder. That folder is your whole site.</Text
   >
-  <Code>{{ build }}</Code>
+  <Code lang="bash">{{ build }}</Code>
 
   <Heading :level="3">Push your changes</Heading>
   <Text>If the build runs fine, commit and push.</Text>
-  <Code>{{ git }}</Code>
+  <Code lang="bash">{{ git }}</Code>
 
   <Heading :level="3">Host it</Heading>
   <Text

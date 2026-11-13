@@ -12,7 +12,7 @@ npm run test:watch   # rerun on every change`;
     happy-dom as the browser environment. They live in <Code inline>tests/</Code>,
     with their own <Code inline>tsconfig.vitest.json</Code>.</Text
   >
-  <Code>{{ commands }}</Code>
+  <Code lang="bash">{{ commands }}</Code>
 
   <Heading :level="3">What is covered</Heading>
   <BulletList>

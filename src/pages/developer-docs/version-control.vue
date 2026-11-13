@@ -50,7 +50,7 @@ feat!: remove the old API      # → 2.0.0`;
       <Code inline>BREAKING CHANGE:</Code> footer.</BulletItem
     >
   </BulletList>
-  <Code>{{ breaking }}</Code>
+  <Code lang="bash">{{ breaking }}</Code>
 
   <Heading :level="3">Types that don't release</Heading>
   <Text
@@ -59,7 +59,7 @@ feat!: remove the old API      # → 2.0.0`;
   >
 
   <Heading :level="3">Example</Heading>
-  <Code>{{ example }}</Code>
+  <Code lang="bash">{{ example }}</Code>
   <Text
     >semantic-release reads every commit since the last release and applies
     the largest bump it finds.</Text

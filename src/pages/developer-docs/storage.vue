@@ -64,7 +64,7 @@ const pageInfo = `{
       width.</BulletItem
     >
   </BulletList>
-  <Code>{{ pageInfo }}</Code>
+  <Code lang="ts">{{ pageInfo }}</Code>
 
   <Heading :level="3">Keys</Heading>
   <Text

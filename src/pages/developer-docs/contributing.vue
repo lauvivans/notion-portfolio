@@ -29,7 +29,7 @@ tests/                  Vitest tests`;
     <Code inline>packages/core</Code> through the <Code inline>@core</Code> alias. A change
     in a block shows up here right away.</Text
   >
-  <Code>{{ start }}</Code>
+  <Code lang="bash">{{ start }}</Code>
 
   <Heading :level="3">Structure</Heading>
   <Code>{{ tree }}</Code>

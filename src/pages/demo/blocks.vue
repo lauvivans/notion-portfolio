@@ -33,7 +33,7 @@ const code = {
   code: `<Text>Run <Code inline>npm run dev</Code> to start.</Text>
 
 <!-- Pass multi-line code through {{ }} to keep its line breaks -->
-<Code>{{ sample }}</Code>`,
+<Code lang="js">{{ sample }}</Code>`,
   bullets: `<BulletList :items="['First item', 'Second item']" />
 
 <BulletList>
@@ -75,28 +75,28 @@ console.log(greeting);`;
 
   <Heading :level="3">Text</Heading>
   <Text>A paragraph with <TextHighlight>highlighted</TextHighlight> words.</Text>
-  <Code>{{ code.text }}</Code>
+  <Code lang="vue">{{ code.text }}</Code>
 
   <Heading :level="3">Heading</Heading>
   <Heading :level="4">Heading level 4</Heading>
   <Text>Levels 1 to 4.</Text>
-  <Code>{{ code.heading }}</Code>
+  <Code lang="vue">{{ code.heading }}</Code>
 
   <Heading :level="3">Callout</Heading>
   <Callout emoji="💡">A callout with an emoji.</Callout>
-  <Code>{{ code.callout }}</Code>
+  <Code lang="vue">{{ code.callout }}</Code>
 
   <Heading :level="3">Code</Heading>
   <Text>Run <Code inline>npm run dev</Code> to start.</Text>
-  <Code>{{ sample }}</Code>
-  <Code>{{ code.code }}</Code>
+  <Code lang="js">{{ sample }}</Code>
+  <Code lang="vue">{{ code.code }}</Code>
 
   <Heading :level="3">Bulleted list</Heading>
   <BulletList :items="['First item', 'Second item']" />
   <BulletList>
     <BulletItem>Or write the items <TextHighlight>by hand</TextHighlight></BulletItem>
   </BulletList>
-  <Code>{{ code.bullets }}</Code>
+  <Code lang="vue">{{ code.bullets }}</Code>
 
   <Heading :level="3">To-do list</Heading>
   <ToDoList
@@ -105,14 +105,14 @@ console.log(greeting);`;
       { name: 'Not yet', isChecked: false },
     ]"
   />
-  <Code>{{ code.todo }}</Code>
+  <Code lang="vue">{{ code.todo }}</Code>
 
   <Heading :level="3">Toggle list</Heading>
   <ToggleList :iconToOpen="Icons.arrowRightFilled" :iconToClose="Icons.arrowDownFilled">
     <template #summaryContent>Click the arrow</template>
     <template #detailsContent><Text>Hidden content.</Text></template>
   </ToggleList>
-  <Code>{{ code.toggle }}</Code>
+  <Code lang="vue">{{ code.toggle }}</Code>
   <Callout emoji="⚠️"
     >The icons come from the <Code inline>Icons</Code> enum, which the package
     doesn't export yet.</Callout
@@ -127,23 +127,23 @@ console.log(greeting);`;
     >From 2 to 5 columns. Sizes are optional: 10, 20, 30, 40, 60, 80 or 90
     percent.</Text
   >
-  <Code>{{ code.columns }}</Code>
+  <Code lang="vue">{{ code.columns }}</Code>
 
   <Heading :level="3">Links</Heading>
   <Text>An inline <Link :href="vueUrl">link</Link>.</Text>
   <LinkMention :page="metadata.pages['coffee-shop']" emoji="☕" />
   <LinkMention :href="repoUrl" emoji="🐙" />
   <Bookmark title="Kami" subtitle="Source code" :link="repoUrl" />
-  <Code>{{ code.links }}</Code>
+  <Code lang="vue">{{ code.links }}</Code>
 
   <Heading :level="3">Image</Heading>
   <Image src="/banners/page-example.webp" />
-  <Code>{{ code.image }}</Code>
+  <Code lang="vue">{{ code.image }}</Code>
 
   <Heading :level="3">Divider, empty space and loader</Heading>
   <Divider />
   <Loader />
-  <Code>{{ code.others }}</Code>
+  <Code lang="vue">{{ code.others }}</Code>
 
   <Heading :level="3">Database</Heading>
   <Text

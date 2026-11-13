@@ -10,14 +10,14 @@ import { aboutPage as page, aboutMetadata as meta } from "@/code-samples";
     >Create a Vue component in <Code inline>src/pages/</Code> and build its content
     with Kami's blocks.</Text
   >
-  <Code>{{ page }}</Code>
+  <Code lang="vue">{{ page }}</Code>
 
   <Heading :level="3">2. Add it to the metadata</Heading>
   <Text
     >Every page needs an entry in <Code inline>metadata.pages</Code>. The key and the
     <Code inline>id</Code> must match.</Text
   >
-  <Code>{{ meta }}</Code>
+  <Code lang="ts">{{ meta }}</Code>
 
   <Heading :level="3">Page fields</Heading>
   <BulletList>

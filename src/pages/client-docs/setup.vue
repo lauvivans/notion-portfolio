@@ -25,14 +25,14 @@ const tree = `my-portfolio/
     and installs Kami. The folder name defaults to
     <Code inline>my-portfolio</Code>.</Text
   >
-  <Code>{{ create }}</Code>
+  <Code lang="bash">{{ create }}</Code>
   <Callout emoji="⚠️"
     >If the folder already exists, the CLI stops with an error and changes
     nothing.</Callout
   >
 
   <Heading :level="3">Run it</Heading>
-  <Code>{{ run }}</Code>
+  <Code lang="bash">{{ run }}</Code>
   <Text
     >Open the address Vite prints. The template comes with one page, a banner
     and an icon, so you see a working portfolio right away.</Text
