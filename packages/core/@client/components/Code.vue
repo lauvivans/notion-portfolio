@@ -90,6 +90,7 @@ function slotText(): string {
 
 .code {
   font-family: $mono;
+  font-weight: $fw-500;
   font-size: $fs-small;
 
   &--inline {
