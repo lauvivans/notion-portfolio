@@ -26,68 +26,6 @@ function slotText(): string {
 </template>
 
 <style scoped lang="scss">
-@mixin syntax(
-  $keyword,
-  $string,
-  $number,
-  $comment,
-  $function,
-  $type,
-  $tag,
-  $attribute,
-  $builtin,
-  $meta
-) {
-  :deep(.hljs-keyword),
-  :deep(.hljs-selector-tag) {
-    color: $keyword !important;
-  }
-
-  :deep(.hljs-string),
-  :deep(.hljs-regexp) {
-    color: $string !important;
-  }
-
-  :deep(.hljs-number),
-  :deep(.hljs-literal) {
-    color: $number !important;
-  }
-
-  :deep(.hljs-comment) {
-    color: $comment !important;
-    font-style: italic;
-  }
-
-  :deep(.hljs-title),
-  :deep(.hljs-section) {
-    color: $function !important;
-  }
-
-  :deep(.hljs-type),
-  :deep(.hljs-selector-class),
-  :deep(.hljs-attr) {
-    color: $type !important;
-  }
-
-  :deep(.hljs-name) {
-    color: $tag !important;
-  }
-
-  :deep(.hljs-attribute),
-  :deep(.hljs-variable),
-  :deep(.hljs-params) {
-    color: $attribute !important;
-  }
-
-  :deep(.hljs-built_in) {
-    color: $builtin !important;
-  }
-
-  :deep(.hljs-meta) {
-    color: $meta !important;
-  }
-}
-
 .code {
   font-family: $mono;
   font-weight: $fw-500;
@@ -102,6 +40,12 @@ function slotText(): string {
   }
 
   &--block {
+    --code-keyword: #{$code-keyword};
+    --code-string: #{$code-string};
+    --code-function: #{$code-function};
+    --code-number: #{$code-number};
+    --code-comment: #{$code-comment};
+
     overflow-x: auto;
 
     margin: $DEFAULT_SPACING 0;
@@ -113,35 +57,60 @@ function slotText(): string {
     tab-size: 2;
 
     background-color: $gray;
-
-    @include syntax(
-      $latte-mauve,
-      $latte-green,
-      $latte-peach,
-      $latte-overlay0,
-      $latte-blue,
-      $latte-teal,
-      $latte-blue,
-      $latte-maroon,
-      $latte-red,
-      $latte-pink
-    );
   }
 }
 
-:global(.dark-theme) .code--block,
-:global(.cat-mocha) .code--block {
-  @include syntax(
-    $mocha-mauve,
-    $mocha-green,
-    $mocha-peach,
-    $mocha-overlay0,
-    $mocha-blue,
-    $mocha-teal,
-    $mocha-blue,
-    $mocha-maroon,
-    $mocha-red,
-    $mocha-pink
-  );
+// Notion's code colors. The dark themes force `span` colors with
+// !important, so these need it too.
+.code--block {
+  :deep(.hljs-keyword),
+  :deep(.hljs-selector-tag),
+  :deep(.hljs-type),
+  :deep(.hljs-attr),
+  :deep(.hljs-selector-class) {
+    color: var(--code-keyword) !important;
+  }
+
+  :deep(.hljs-string),
+  :deep(.hljs-regexp),
+  :deep(.hljs-attribute) {
+    color: var(--code-string) !important;
+  }
+
+  :deep(.hljs-title),
+  :deep(.hljs-section),
+  :deep(.hljs-built_in) {
+    color: var(--code-function) !important;
+  }
+
+  :deep(.hljs-number),
+  :deep(.hljs-literal),
+  :deep(.hljs-name) {
+    color: var(--code-number) !important;
+  }
+
+  :deep(.hljs-comment),
+  :deep(.hljs-meta) {
+    color: var(--code-comment) !important;
+  }
+
+  :deep(.hljs-comment) {
+    font-style: italic;
+  }
+}
+</style>
+
+<style lang="scss">
+// Unscoped: a scoped style can't target the theme class on <body>.
+// `.code.code--block` outranks the scoped `.code--block[data-v-…]`.
+.dark-theme,
+.cat-mocha {
+  .code.code--block {
+    --code-keyword: #{$code-keyword-dark};
+    --code-string: #{$code-string-dark};
+    --code-function: #{$code-function-dark};
+    --code-number: #{$code-number-dark};
+    --code-comment: #{$code-comment-dark};
+  }
 }
 </style>

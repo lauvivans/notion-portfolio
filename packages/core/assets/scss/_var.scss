@@ -117,6 +117,18 @@ $box-shadow-3:
 $radius-small: 4px;
 $radius: 5px;
 
+/* code syntax, light and dark */
+$code-keyword: #0077aa;
+$code-string: #669900;
+$code-function: #dd4a68;
+$code-number: #990055;
+$code-comment: #708090;
+$code-keyword-dark: #7fb4ca;
+$code-string-dark: #a3be8c;
+$code-function-dark: #e08b9b;
+$code-number-dark: #c38fb5;
+$code-comment-dark: #8a939c;
+
 /* font size dinamic */
 $fs-xs: 0.74rem;
 $fs-small: 0.9rem;
