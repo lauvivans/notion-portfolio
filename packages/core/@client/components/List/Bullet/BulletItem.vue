@@ -25,10 +25,9 @@ import { Icons } from "@core/enum";
     color: $black-7;
   }
 
+  // A plain block, so inline content (code, links, highlights) flows with
+  // the text instead of becoming separate flex columns.
   &__item {
-    display: flex;
-    column-gap: 5px;
-
     margin: 0;
 
     flex: 1;
