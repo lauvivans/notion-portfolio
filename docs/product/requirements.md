@@ -48,7 +48,7 @@ What Kami offers and the rules it follows.
 The components a page uses for its content, named after Notion's blocks:
 
 - **Text:** `Text`, `Heading` (levels 1 to 4) and `TextHighlight`.
-- **Code:** `Code`, as a block or, with `inline`, inside a line of text. A block keeps the line breaks of the code it receives. With `lang` (`ts`, `js`, `vue`, `html`, `scss`, `json` or `bash`), the block gets syntax highlighting from highlight.js, colored with the `$code-*` tokens (based on Notion's code colors), with a light and a dark set.
+- **Code:** `Code`, as a block or, with `inline`, inside a line of text. A block keeps the line breaks of the code it receives. With `lang` (`ts`, `js`, `vue`, `html`, `scss`, `json` or `bash`), the block gets syntax highlighting from highlight.js, colored with the `$code-*` tokens (GitHub's code colors), with a light and a dark set.
 - **Callout:** a box with an emoji and text.
 - **Lists:** `BulletList` and `BulletItem`, `ToDoList` and `ToDoItem` (with a checked state), and `ToggleList`, which shows and hides its content with the icons given to it.
 - **Layout:** `Columns` with 2 to 5 `Column`s and an optional size for each, `Divider` and `Empty` (blank space).

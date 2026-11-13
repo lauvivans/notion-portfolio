@@ -60,14 +60,12 @@ function slotText(): string {
   }
 }
 
-// Notion's code colors. The dark themes force `span` colors with
+// GitHub's code colors. The dark themes force `span` colors with
 // !important, so these need it too.
 .code--block {
   :deep(.hljs-keyword),
   :deep(.hljs-selector-tag),
-  :deep(.hljs-type),
-  :deep(.hljs-attr),
-  :deep(.hljs-selector-class) {
+  :deep(.hljs-name) {
     color: var(--code-keyword) !important;
   }
 
@@ -85,7 +83,9 @@ function slotText(): string {
 
   :deep(.hljs-number),
   :deep(.hljs-literal),
-  :deep(.hljs-name) {
+  :deep(.hljs-type),
+  :deep(.hljs-attr),
+  :deep(.hljs-selector-class) {
     color: var(--code-number) !important;
   }
 
