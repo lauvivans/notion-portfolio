@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import { Text, Heading, Callout, LinkMention } from "@core/index.ts";
-import CodeBlock from "@/components/CodeBlock.vue";
+import { Text, Heading, Callout, LinkMention, Code } from "@core/index.ts";
 import metadata from "@/metadata";
 
 const create = `npx create-kami my-portfolio`;
@@ -24,26 +23,26 @@ const tree = `my-portfolio/
   <Text
     >The CLI copies the template into a new folder, installs its dependencies
     and installs Kami. The folder name defaults to
-    <code>my-portfolio</code>.</Text
+    <Code inline>my-portfolio</Code>.</Text
   >
-  <CodeBlock :code="create" />
+  <Code>{{ create }}</Code>
   <Callout emoji="⚠️"
     >If the folder already exists, the CLI stops with an error and changes
     nothing.</Callout
   >
 
   <Heading :level="3">Run it</Heading>
-  <CodeBlock :code="run" />
+  <Code>{{ run }}</Code>
   <Text
     >Open the address Vite prints. The template comes with one page, a banner
     and an icon, so you see a working portfolio right away.</Text
   >
 
   <Heading :level="3">What's inside</Heading>
-  <CodeBlock :code="tree" />
+  <Code>{{ tree }}</Code>
   <Text
     >The styles come from one CSS file, imported once in
-    <code>src/main.ts</code>: <code>@lauvivans/kami/dist/kami.css</code>.</Text
+    <Code inline>src/main.ts</Code>: <Code inline>@lauvivans/kami/dist/kami.css</Code>.</Text
   >
 
   <Text>Next step:</Text>

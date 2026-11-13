@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import { Text, Heading, BulletList, BulletItem, Link } from "@core/index.ts";
-import CodeBlock from "@/components/CodeBlock.vue";
+import { Text, Heading, BulletList, BulletItem, Link, Code } from "@core/index.ts";
 
 const repo = "https://github.com/lauvivans/kami/blob/develop";
 
@@ -26,14 +25,14 @@ tests/                  Vitest tests`;
 <template>
   <Heading :level="3">Run it locally</Heading>
   <Text
-    ><code>npm run dev</code> starts this site, which imports the library from
-    <code>packages/core</code> through the <code>@core</code> alias. A change
+    ><Code inline>npm run dev</Code> starts this site, which imports the library from
+    <Code inline>packages/core</Code> through the <Code inline>@core</Code> alias. A change
     in a block shows up here right away.</Text
   >
-  <CodeBlock :code="start" />
+  <Code>{{ start }}</Code>
 
   <Heading :level="3">Structure</Heading>
-  <CodeBlock :code="tree" />
+  <Code>{{ tree }}</Code>
 
   <Heading :level="3">Rules</Heading>
   <BulletList>
@@ -42,11 +41,11 @@ tests/                  Vitest tests`;
       commits.</BulletItem
     >
     <BulletItem
-      >PRs target <code>develop</code>. Branch names follow
-      <code>&lt;type&gt;/&lt;issue&gt;-kebab-case-name</code>.</BulletItem
+      >PRs target <Code inline>develop</Code>. Branch names follow
+      <Code inline>&lt;type&gt;/&lt;issue&gt;-kebab-case-name</Code>.</BulletItem
     >
     <BulletItem
-      >Anything exported from <code>packages/core/index.ts</code> is public
+      >Anything exported from <Code inline>packages/core/index.ts</Code> is public
       API. Breaking it needs a major version.</BulletItem
     >
     <BulletItem

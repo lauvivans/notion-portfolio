@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import { Text, Heading, BulletList, BulletItem, Link } from "@core/index.ts";
-import CodeBlock from "@/components/CodeBlock.vue";
+import { Text, Heading, BulletList, BulletItem, Link, Code } from "@core/index.ts";
 
 const semver = `1.0.0
 │ │ └── PATCH: bug fixes (backward compatible)
@@ -22,22 +21,22 @@ feat!: remove the old API      # → 2.0.0`;
     <Link href="https://semantic-release.gitbook.io/">semantic-release</Link>
     from the
     <Link href="https://www.conventionalcommits.org/">Conventional Commits</Link>
-    merged into <code>main</code>.</Text
+    merged into <Code inline>main</Code>.</Text
   >
-  <CodeBlock :code="semver" />
+  <Code>{{ semver }}</Code>
 
   <Heading :level="3">PATCH: 1.0.0 → 1.0.1</Heading>
   <BulletList>
     <BulletItem>Bug fixes, performance and small internal changes.</BulletItem>
     <BulletItem>Nothing breaks for people using the library.</BulletItem>
-    <BulletItem>Commit type: <code>fix: correct validation error</code></BulletItem>
+    <BulletItem>Commit type: <Code inline>fix: correct validation error</Code></BulletItem>
   </BulletList>
 
   <Heading :level="3">MINOR: 1.0.0 → 1.1.0</Heading>
   <BulletList>
     <BulletItem>New features and new blocks.</BulletItem>
     <BulletItem>Everything that worked before still works.</BulletItem>
-    <BulletItem>Commit type: <code>feat: add support for filters</code></BulletItem>
+    <BulletItem>Commit type: <Code inline>feat: add support for filters</Code></BulletItem>
   </BulletList>
 
   <Heading :level="3">MAJOR: 1.0.0 → 2.0.0</Heading>
@@ -47,20 +46,20 @@ feat!: remove the old API      # → 2.0.0`;
       prop or CSS class.</BulletItem
     >
     <BulletItem
-      >Add <code>!</code> after the type, or a
-      <code>BREAKING CHANGE:</code> footer.</BulletItem
+      >Add <Code inline>!</Code> after the type, or a
+      <Code inline>BREAKING CHANGE:</Code> footer.</BulletItem
     >
   </BulletList>
-  <CodeBlock :code="breaking" />
+  <Code>{{ breaking }}</Code>
 
   <Heading :level="3">Types that don't release</Heading>
   <Text
-    ><code>docs</code>, <code>style</code>, <code>refactor</code>,
-    <code>test</code>, <code>chore</code> and <code>ci</code>.</Text
+    ><Code inline>docs</Code>, <Code inline>style</Code>, <Code inline>refactor</Code>,
+    <Code inline>test</Code>, <Code inline>chore</Code> and <Code inline>ci</Code>.</Text
   >
 
   <Heading :level="3">Example</Heading>
-  <CodeBlock :code="example" />
+  <Code>{{ example }}</Code>
   <Text
     >semantic-release reads every commit since the last release and applies
     the largest bump it finds.</Text

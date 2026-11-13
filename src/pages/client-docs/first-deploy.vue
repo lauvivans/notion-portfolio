@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import { Text, Heading, Callout, Link } from "@core/index.ts";
-import CodeBlock from "@/components/CodeBlock.vue";
+import { Text, Heading, Callout, Link, Code } from "@core/index.ts";
 
 const build = `npm run build`;
 const git = `git add .
@@ -11,27 +10,27 @@ git push -u origin main`;
 <template>
   <Heading :level="3">Build for production</Heading>
   <Text
-    >The build bundles and minifies your code into the <code>dist/</code>
+    >The build bundles and minifies your code into the <Code inline>dist/</Code>
     folder. That folder is your whole site.</Text
   >
-  <CodeBlock :code="build" />
+  <Code>{{ build }}</Code>
 
   <Heading :level="3">Push your changes</Heading>
   <Text>If the build runs fine, commit and push.</Text>
-  <CodeBlock :code="git" />
+  <Code>{{ git }}</Code>
 
   <Heading :level="3">Host it</Heading>
   <Text
     >A Kami portfolio is a static site, so any static host works. Point the
     host to your repository, set the build command to
-    <code>npm run build</code> and the output folder to
-    <code>dist</code>.</Text
+    <Code inline>npm run build</Code> and the output folder to
+    <Code inline>dist</Code>.</Text
   >
   <Callout emoji="⚠️"
-    >Kami uses browser history routes, like <code>/about</code>. The host must
-    answer every path with <code>index.html</code>, or a reload on a sub-page
+    >Kami uses browser history routes, like <Code inline>/about</Code>. The host must
+    answer every path with <Code inline>index.html</Code>, or a reload on a sub-page
     returns 404. Cloudflare Pages does this when the site has no
-    <code>404.html</code>; other hosts need a rewrite rule.</Callout
+    <Code inline>404.html</Code>; other hosts need a rewrite rule.</Callout
   >
   <Text
     >This site runs on

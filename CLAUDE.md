@@ -17,9 +17,7 @@ Everything in the repository and on GitHub is in English: code, docs, file names
 - `src/`: the documentation site, served at kami.arualvivan.com and built with Kami itself. It imports the library from `packages/core` through the `@core` alias, so it also works as the local playground.
   - `metadata/index.ts`: every page of the site. Top-level pages: Kami (home), Client docs, Developer docs and Demo.
   - `pages/client-docs/` and `pages/developer-docs/`: the guides.
-  - `pages/demo/`: an example portfolio, with every block on the Blocks page.
-  - `components/CodeBlock.vue`: a code block used only by the site, since the library has none.
-- `template/`: the project the CLI copies. It has its own `package.json` and lockfile (#68). `gitignore` is renamed to `.gitignore` on copy, since npm drops dot-gitignore files from packages.
+  - `pages/demo/`: an example portfolio, with every block on the Blocks page.- `template/`: the project the CLI copies. It has its own `package.json` and lockfile (#68). `gitignore` is renamed to `.gitignore` on copy, since npm drops dot-gitignore files from packages.
 - `bin/cli.js`: the CLI. It copies `template/`, installs its dependencies and then the library.
 - `tests/`: Vitest tests, with `tsconfig.vitest.json`.
 - `docs/product/requirements.md`: what the library offers and its rules.

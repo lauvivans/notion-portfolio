@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import { Text, Heading, Callout, Link } from "@core/index.ts";
-import CodeBlock from "@/components/CodeBlock.vue";
+import { Text, Heading, Callout, Link, Code } from "@core/index.ts";
 import { iconUsage as usage } from "@/code-samples";
 
 const enumCode = `// packages/core/enum/icons.ts
@@ -34,15 +33,15 @@ about: {
     >, rendered with
     <Link href="https://iconify.design/docs/icon-components/vue/"
       >@iconify/vue</Link
-    >. Every icon the library uses is listed in the <code>Icons</code>
+    >. Every icon the library uses is listed in the <Code inline>Icons</Code>
     enum.</Text
   >
-  <CodeBlock :code="enumCode" />
+  <Code>{{ enumCode }}</Code>
   <Text
-    >Inside the library, render them with the <code>Icon</code>
+    >Inside the library, render them with the <Code inline>Icon</Code>
     component.</Text
   >
-  <CodeBlock :code="usage" />
+  <Code>{{ usage }}</Code>
   <Callout emoji="📌"
     >To add an icon, find its name on Iconify and add it to the enum. The
     icon is fetched from the Iconify API at runtime, so nothing else needs
@@ -56,8 +55,8 @@ about: {
     <Link href="https://www.flaticon.com/free-sticker/drink_7465398"
       >coffee shop pack</Link
     >
-    and credits it through the <code>author</code> and
-    <code>link</code> fields.</Text
+    and credits it through the <Code inline>author</Code> and
+    <Code inline>link</Code> fields.</Text
   >
-  <CodeBlock :code="pageIcon" />
+  <Code>{{ pageIcon }}</Code>
 </template>

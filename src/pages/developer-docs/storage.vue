@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import { Text, Heading, Callout, BulletList, BulletItem, Link } from "@core/index.ts";
-import CodeBlock from "@/components/CodeBlock.vue";
+import { Text, Heading, Callout, BulletList, BulletItem, Link, Code } from "@core/index.ts";
 
 const tree = `packages/core/
 ├── store/
@@ -45,10 +44,10 @@ const pageInfo = `{
   >
   <Callout emoji="💡"
     >The store reads localStorage once, when it starts, and the components
-    write back through the setters in <code>util/local-storage/</code>. Pinia
+    write back through the setters in <Code inline>util/local-storage/</Code>. Pinia
     talks to localStorage only through those functions.</Callout
   >
-  <CodeBlock :code="tree" />
+  <Code>{{ tree }}</Code>
 
   <Heading :level="3">What is stored</Heading>
   <BulletList>
@@ -65,26 +64,26 @@ const pageInfo = `{
       width.</BulletItem
     >
   </BulletList>
-  <CodeBlock :code="pageInfo" />
+  <Code>{{ pageInfo }}</Code>
 
   <Heading :level="3">Keys</Heading>
   <Text
-    >All keys live in <code>util/local-storage/constants.ts</code> and start
-    with <code>kami-</code>.</Text
+    >All keys live in <Code inline>util/local-storage/constants.ts</Code> and start
+    with <Code inline>kami-</Code>.</Text
   >
-  <CodeBlock :code="keys" />
+  <Code>{{ keys }}</Code>
 
   <Heading :level="3">Pinia store</Heading>
   <Text
-    >The store is defined with <code>defineStore("global", ...)</code>. Its
+    >The store is defined with <Code inline>defineStore("global", ...)</Code>. Its
     state holds the page settings, the theme, the tabs, the active tab, the
     active page, the sidebar state and the page open in a modal. Each piece
-    of state has an action to change it (<code>storeTheme</code>,
-    <code>storeTabs</code> and so on) and a getter to read it.</Text
+    of state has an action to change it (<Code inline>storeTheme</Code>,
+    <Code inline>storeTabs</Code> and so on) and a getter to read it.</Text
   >
   <Text
     >Pinia is bundled into the package. A portfolio reads the store through
-    <code>useStore</code> and installs <code>piniaInstance</code> in its
+    <Code inline>useStore</Code> and installs <Code inline>piniaInstance</Code> in its
     app.</Text
   >
 </template>

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Text, Heading, BulletList, BulletItem, Link, LinkMention } from "@core/index.ts";
+import { Text, Heading, BulletList, BulletItem, Link, LinkMention, Code } from "@core/index.ts";
 import metadata from "@/metadata";
 
 // vue-tsc 3.3 misreads a URL passed to a component in the template and
@@ -31,9 +31,9 @@ const nodeUrl = "https://nodejs.org/";
 
   <Heading :level="3">How a Kami portfolio works</Heading>
   <BulletList>
-    <BulletItem>Each page is a Vue component in <code>src/pages/</code>.</BulletItem>
+    <BulletItem>Each page is a Vue component in <Code inline>src/pages/</Code>.</BulletItem>
     <BulletItem
-      >A metadata object in <code>src/metadata/index.ts</code> lists the pages,
+      >A metadata object in <Code inline>src/metadata/index.ts</Code> lists the pages,
       their titles, banners, icons and sub-pages.</BulletItem
     >
     <BulletItem

@@ -1,6 +1,7 @@
 export { Aside, Header, Tabs } from "./components";
 export {
   Bookmark,
+  Code,
   Breadcrumb,
   BulletItem,
   BulletList,

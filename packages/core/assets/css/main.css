@@ -531,7 +531,8 @@ body :-webkit-any-link:hover {
 .dark-theme .nav-hover .nav-list,
 .dark-theme .toggle-btn.unchecked,
 .dark-theme .header-menu .menu,
-.dark-theme .callout {
+.dark-theme .callout,
+.dark-theme .code {
   background-color: rgb(0, 0, 0) !important;
 }
 
@@ -642,7 +643,8 @@ body :-webkit-any-link:hover {
 .cat-latte .nav-hover .nav-list,
 .cat-latte .toggle-btn.unchecked,
 .cat-latte .header-menu .menu,
-.cat-latte .callout {
+.cat-latte .callout,
+.cat-latte .code {
   background-color: #ccd0da !important;
 }
 
@@ -753,7 +755,8 @@ body :-webkit-any-link:hover {
 .cat-mocha .nav-hover .nav-list,
 .cat-mocha .toggle-btn.unchecked,
 .cat-mocha .header-menu .menu,
-.cat-mocha .callout {
+.cat-mocha .callout,
+.cat-mocha .code {
   background-color: #181825 !important;
 }
 
