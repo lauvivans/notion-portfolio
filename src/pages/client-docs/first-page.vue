@@ -2,47 +2,7 @@
 import { Text, Heading, Callout, BulletList, BulletItem, LinkMention } from "@core/index.ts";
 import CodeBlock from "@/components/CodeBlock.vue";
 import metadata from "@/metadata";
-
-const page = `<!-- src/pages/about.vue -->
-<script setup lang="ts">
-import { Text, Heading, Callout } from "@lauvivans/kami";
-<\/script>
-
-<template>
-  <Heading :level="2">About me</Heading>
-  <Text>I build websites with Vue.</Text>
-  <Callout emoji="☕">Currently open to new projects.</Callout>
-</template>`;
-
-const meta = `// src/metadata/index.ts
-import type { IMetadata } from "@lauvivans/kami";
-import Home from "../pages/index.vue";
-import About from "../pages/about.vue";
-
-const metadata: IMetadata = {
-  user: { author: "Your Name", socialMedia: "@you" },
-  pages: {
-    home: {
-      id: "home",
-      path: "/",
-      title: "Hello",
-      isHomepage: true,
-      component: Home,
-      pages: ["about"],
-    },
-    about: {
-      id: "about",
-      path: "/about",
-      title: "About me",
-      component: About,
-      parentPage: "home",
-      icon: { path: "/icons/about.png" },
-    },
-  },
-  favorites: ["home"],
-};
-
-export default metadata;`;
+import { aboutPage as page, aboutMetadata as meta } from "@/code-samples";
 </script>
 
 <template>

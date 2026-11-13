@@ -24,6 +24,12 @@ export default defineConfig({
     },
   },
 
+  // Scan only the site. By default Vite also scans template/index.html and
+  // any portfolio created locally with the CLI.
+  optimizeDeps: {
+    entries: ["index.html"],
+  },
+
   test: {
     environment: "happy-dom",
     include: ["tests/**/*.test.ts"],

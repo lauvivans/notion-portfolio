@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { Text, Heading, Callout, Link } from "@core/index.ts";
 import CodeBlock from "@/components/CodeBlock.vue";
+import { iconUsage as usage } from "@/code-samples";
 
 const enumCode = `// packages/core/enum/icons.ts
 export enum Icons {
@@ -10,14 +11,6 @@ export enum Icons {
   // ...
 }`;
 
-const usage = `<script setup lang="ts">
-import Icon from "@core/@client/components/Icon.vue";
-import { Icons } from "@core/enum";
-<\/script>
-
-<template>
-  <Icon :icon="Icons.search" />
-</template>`;
 
 const pageIcon = `// metadata: page icons and banners are images in public/
 about: {
