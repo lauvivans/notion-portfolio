@@ -63,7 +63,8 @@
   .nav-hover .nav-list,
   .toggle-btn.unchecked,
   .header-menu .menu,
-  .callout {
+  .callout,
+  .code {
     background-color: $bgAsideHover !important;
   }
 
@@ -172,4 +173,12 @@
     var.$mocha-surface1,
     var.$mocha-surface0
   );
+}
+
+// Inline code keeps a red tone that reads on dark backgrounds.
+.dark-theme,
+.cat-mocha {
+  .code--inline {
+    color: var.$mocha-red !important;
+  }
 }

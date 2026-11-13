@@ -86,7 +86,7 @@ $mocha-crust: #11111b;
 
 /*font*/
 $default: "Hanken Grotesk", sans-serif;
-$mono: iawriter-mono, Nitti, Menlo, Courier, monospace;
+$mono: "Roboto Mono", iawriter-mono, Nitti, Menlo, Courier, monospace;
 $serif: Lyon-Text, Georgia, ui-serif, serif;
 
 /*font weight*/
@@ -112,6 +112,22 @@ $box-shadow-3:
   rgba(15, 15, 15, 0.05) 0px 0px 0px 0px,
   rgba(15, 15, 15, 0.1) 0px 0px 1px,
   rgba(15, 15, 15, 0.2) 0px 0px 6px;
+
+/* radius */
+$radius-small: 4px;
+$radius: 5px;
+
+/* code syntax (GitHub Primer), light and dark */
+$code-keyword: #cf222e;
+$code-string: #0a3069;
+$code-function: #8250df;
+$code-number: #0550ae;
+$code-comment: #6e7781;
+$code-keyword-dark: #ff7b72;
+$code-string-dark: #a5d6ff;
+$code-function-dark: #d2a8ff;
+$code-number-dark: #79c0ff;
+$code-comment-dark: #8b949e;
 
 /* font size dinamic */
 $fs-xs: 0.74rem;
